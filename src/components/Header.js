@@ -4,6 +4,7 @@ import {
   ShoppingCartIcon,
   Bars3Icon,
 } from '@heroicons/react/24/outline';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 function Header() {
   return (
@@ -29,7 +30,7 @@ function Header() {
         </div>
         {/* Right */}
         <div className='text-white flex items-center text-xs space-x-6 whitespace-nowrap'>
-          <div className='link'>
+          <div className='link' onClick={signIn}>
             <p>Hello Bora Karaca</p>
             <p className='font-extrabold md:text-sm'>Account & Lists</p>
           </div>

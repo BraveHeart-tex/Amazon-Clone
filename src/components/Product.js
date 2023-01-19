@@ -8,7 +8,7 @@ function Product({ id, title, price, description, category, image }) {
   const [hasPrime] = useState(Math.random() < 0.5);
 
   return (
-    <div className='relative flex flex-col m-5 bg-white z-30 p-10'>
+    <div className='relative flex flex-col m-5 bg-white z-30 p-10' key={id}>
       <p className='absolute top-2 right-2 text-xs italic text-gray-400'>
         {category}
       </p>
@@ -20,7 +20,7 @@ function Product({ id, title, price, description, category, image }) {
         {Array(rating)
           .fill()
           .map((_, i) => (
-            <StarIcon class='h-5 text-yellow-500' />
+            <StarIcon className='h-5 text-yellow-500' />
           ))}
       </div>
 

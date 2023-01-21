@@ -23,7 +23,7 @@ export default async (req, res) => {
         shipping_rate_data: {
           type: 'fixed_amount',
           fixed_amount: { amount: 0, currency: 'TRY' },
-          display_name: 'Free Shipping',
+          display_name: 'Bedava Kargo',
           delivery_estimate: {
             minimum: { unit: 'business_day', value: 1 },
             maximum: { unit: 'business_day', value: 3 },
